@@ -1,3 +1,4 @@
+
 * {
 padding: 0;
 margin: 0;
@@ -9,7 +10,6 @@ font-family: 'Montserrat', sans-serif;
 font-size: 100%;
 }
 
-/******* COMMON  *******/
 a {
 text-decoration: none;
 color: inherit;
@@ -34,6 +34,23 @@ width: 100%;
 
 .flexbox {
 display: flex;
+}
+
+
+.justify-center {
+justify-content: center;
+}
+
+.justify-between {
+justify-content: space-between;
+}
+
+.align-center {
+align-items: center;
+}
+
+.position-relative {
+position: relative;
 }
 
 :root {
@@ -77,6 +94,15 @@ margin-bottom: 3rem;
 margin-left: 2rem;
 }
 
+/* padding  */
+.pd-tp1 {
+padding-top: 1rem;
+}
+
+.pd-tp2 {
+padding-top: 2rem;
+}
+
 /* color  */
 .color-gray {
 color: var(--color-gray);
@@ -87,7 +113,6 @@ color: var(--color-white);
 }
 
 
-/******* HEADER *******/
 header {
 position: fixed;
 top: 0;
@@ -116,7 +141,7 @@ header a:hover {
 transform:scale(1.1);
 }
 
-/******* MAIN  *******/
+
 .container {
 height: calc(100% - 80px);
 width: 100%;
@@ -210,4 +235,257 @@ color: var(--color-white);
 .user .install:hover img {
 opacity: 1;
 }
+
+/* right col  */
+.col-right {
+width: calc(100% - 250px);
+height: calc(100vh - 80px);
+padding: 80px 2rem 0;
+overflow-y: auto;
+}
+
+.col-right nav {
+width: 100%;
+line-height: 2rem;
+}
+
+.col-right nav li {
+margin-right: 1rem;
+position: relative;
+}
+
+.col-right li a:hover {
+color: var(--color-white) ;
+}
+
+.col-right ul li a:focus::after {
+content: '______';
+position: absolute;
+color: #adff2f;
+top: 8px;
+left: 50%;
+transform: translate(-50%);
+
+}
+
+.col-right .col {
+width: calc(100% / 6 - 2rem);
+margin-right: 2rem;
+margin-bottom: 0.5rem;
+}
+
+.border-hover {
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+border-radius: 50%;
+background-color: #0000008c;
+}
+
+.border-hover i {
+display: none;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: var(--color-white);
+font-size: 2.5rem;
+}
+
+.col-right .col:hover .border-hover {
+display: block;
+}
+
+.col-right .col:hover  .img-hover {
+display: block;
+}
+
+.col-right .col:hover i {
+display: block;
+}
+
+.col-right .card-img img {
+display: block;
+width: 250px;
+min-width: 120px;
+}
+
+.col-right .card-txt {
+text-align: center
+}
+
+footer {
+height: 85x;
+}
+
+footer i:hover {
+transform:scale(1.2);
+}
+
+/* on play  */
+.on-play {
+height: 80px;
+align-items: center;
+width: 200px;
+}
+
+.on-play i {
+color: var(--color-gray);
+margin-right: 1rem ;
+}
+
+.on-play img {
+height: 40px;
+margin: 0 1rem;
+}
+
+.on-play .album {
+width: 60%;
+}
+
+.player {
+width: 55%;
+}
+
+.icons {
+height: 50px;
+align-items: center;
+}
+
+.icons i {
+color: var(--color-white);
+margin: 0 15px;
+}
+
+.play-bar {
+align-items: center;    
+}
+
+.play-bar .volume-bar {
+width: 100%;
+border: 3px solid rgb(99, 99, 99);
+border-radius: 50px;
+}
+
+.play-bar .volume-above {
+position: absolute;
+top: 0;
+left: 0;
+width: 30%;
+border: 3px solid rgb(190, 190, 190);
+border-radius: 50px;
+}
+
+.play-bar .volume-hv{
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+width: 150px;
+border: 3px solid #adff2f;
+border-radius: 50px;
+}
+
+.play-bar .player-ball {
+display: none;
+position: absolute;
+top: -4px;
+left: 140px;
+width: 15px;
+height: 15px;
+border-radius: 50%;
+background-color: var(--color-white);
+}
+
+.play-bar .volume:hover .volume-hv {
+display: block;
+}
+.play-bar .volume:hover .player-ball {
+display: block;
+}
+
+.play-bar .range {
+width: 70%;
+}
+
+.play-bar .slider {
+width: 100%;
+}
+
+.mix {
+height: 80px;
+width: 300px;
+align-items: center;
+justify-content: end;
+padding-right: 1rem;
+}
+
+.mix i {
+color: var(--color-white);
+margin-right: 1rem;
+}
+
+.mix .range {
+width: 30%;
+}
+
+.mix .slider {
+width: 35%;
+}
+
+.mix .volume {
+width: 50%;
+}
+
+.mix .volume-bar {
+width: 100%;
+border: 3px solid rgb(99, 99, 99);
+border-radius: 50px;
+}
+
+.mix .volume-above {
+position: absolute;
+top: 0;
+left: 0;
+width: 40%;
+border: 3px solid rgb(190, 190, 190);
+border-radius: 50px;
+}
+.mix .player-ball {
+display: none;
+position: absolute;
+top: -4px;
+left: 50px;
+width: 15px;
+height: 15px;
+border-radius: 50%;
+background-color: var(--color-white);
+}
+
+.mix .volume-hv{
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+width: 40%;
+border: 3px solid red;
+border-radius: 50px;
+}
+
+
+.mix .volume:hover .volume-hv {
+display: block;
+}
+.mix .volume:hover .player-ball {
+display: block;
+}
+
+.block{
+    flex-wrap: wrap;
+    margin-left: 0;
+}
+
 
