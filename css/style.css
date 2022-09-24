@@ -59,7 +59,7 @@ ul{
     align-items: center;
 }
 
-/* common */
+/* common_section */
 /* html */
 html{
     font-family: 'PT Sans', sans-serif;
@@ -440,7 +440,7 @@ main .voices li a{
     font-weight: 400;
 }
 
-.like-folder i{
+.like_and_folder i{
     padding: 1rem 0.5rem;
 }
 /* player_center_section */
@@ -551,11 +551,11 @@ main .voices li a{
 }
 /* tablet */
 @media screen and (max-width: 699px){
-    .like-folder{
+    .like_and_folder{
         flex-direction: column;
     }
 
-    .like-folder i{
+    .like_and_folder i{
         padding: 5px;
         font-size: 12px;
     }
@@ -618,11 +618,16 @@ html .grayclass{
 }
 
 .card-img-container:hover img{
-    opacity: 0.3;
+    opacity: 0.4;
 }
 
 .upgrade-btn:hover {
     transform: scale(1.1);
     position: absolute;
     right: 0px;
+}
+
+footer i:hover {
+    transform:scale(1.2);
+    cursor: pointer;
 }
